@@ -75,6 +75,17 @@ h2{font-family:var(--display);font-weight:700;font-size:1.7rem;letter-spacing:-.
 .cert strong{font-family:var(--display)}
 .cert p{color:var(--muted);font-size:.95rem}
 
+
+.certs h3{font-family:var(--display);font-size:1.05rem;margin:28px 0 12px}
+.certs h3:first-of-type{margin-top:0}
+.certs .intro{color:var(--muted);max-width:62ch;margin-bottom:24px}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;list-style:none}
+.cert-item{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--c,var(--blue));border-radius:10px;padding:14px 16px}
+.cert-item strong{display:block;font-family:var(--display);font-size:.98rem;line-height:1.3}
+.cert-item small{display:block;color:var(--muted);margin-top:4px;font-size:.88rem}
+.cert-item .kind{display:inline-block;margin-top:8px;font-size:.78rem;padding:2px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.cert-grid.modules .cert-item{border-left-color:var(--green);padding:10px 14px}
+.cert-grid.modules strong{font-size:.92rem;font-weight:600}
 .contact p{max-width:56ch;color:var(--muted);margin-bottom:18px}
 footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
 
@@ -172,16 +183,36 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
         <div><h3>Languages</h3><p>Python, HTML, CSS, JavaScript</p></div>
         <div><h3>Web</h3><p>Flask, REST APIs, Google Apps Script</p></div>
         <div><h3>Data and AI</h3><p>pandas, scikit-learn, Prophet, OpenCV, Kafka, Spark, MongoDB</p></div>
-        <div><h3>Tools</h3><p>Git, GitHub, VS Code, Google Colab, Cisco Packet Tracer</p></div>
+        <div><h3>Tools</h3><p>Git, GitHub, VS Code, Google Colab</p></div>
+        <div><h3>IT and networking</h3><p>CCNA Introduction to Networks, Cisco Packet Tracer, Linux, Windows</p></div>
       </div>
     </section>
 
-    <section id="certifications">
-      <h2>Certificates</h2>
-      <div class="cert">
-        <strong>HTML Essentials</strong>
-        <p>Cisco Networking Academy, offered with JS Institute (OpenEDG)<br>Completed 7 November 2026</p>
-      </div>
+    <section class="certs" id="certifications">
+      <h2>Certificates and badges</h2>
+      <p class="intro">Courses and modules I completed through the Cisco Networking Academy, covering web basics, networking, operating systems, and data science.</p>
+
+      <h3>Courses (badge and certificate)</h3>
+      <ul class="cert-grid">
+        <li class="cert-item" style="--c:var(--orange)"><strong>HTML Essentials</strong><small>Cisco Networking Academy with JS Institute (OpenEDG) · Nov 2026</small><span class="kind">Badge + certificate</span></li>
+        <li class="cert-item"><strong>CCNA: Introduction to Networks</strong><small>Cisco Networking Academy · Jul 2026</small><span class="kind">Badge + certificate</span></li>
+        <li class="cert-item"><strong>Introduction to Data Science</strong><small>Cisco Networking Academy · Jan 2026</small><span class="kind">Badge + certificate</span></li>
+        <li class="cert-item"><strong>Linux Unhatched</strong><small>Cisco Networking Academy · Nov 2024</small><span class="kind">Badge + certificate</span></li>
+        <li class="cert-item"><strong>IT Essentials</strong><small>Cisco Networking Academy · Nov 2024</small><span class="kind">Badge + certificate</span></li>
+        <li class="cert-item"><strong>Operating Systems Basics</strong><small>Cisco Networking Academy · Oct 2024</small><span class="kind">Badge + certificate</span></li>
+      </ul>
+
+      <h3>Modules (achievements)</h3>
+      <ul class="cert-grid modules">
+        <li class="cert-item"><strong>Data Careers</strong><small>Sep 2025</small></li>
+        <li class="cert-item"><strong>Artificial Intelligence and Machine Learning Concepts</strong><small>Sep 2025</small></li>
+        <li class="cert-item"><strong>Data Collection</strong><small>Sep 2025</small></li>
+        <li class="cert-item"><strong>Basics of Analytics</strong><small>Sep 2025</small></li>
+        <li class="cert-item"><strong>Mobile Operating Systems and Security</strong><small>Oct 2024</small></li>
+        <li class="cert-item"><strong>Mobile Device Connectivity</strong><small>Oct 2024</small></li>
+        <li class="cert-item"><strong>Linux Operating System</strong><small>Oct 2024</small></li>
+        <li class="cert-item"><strong>Windows Operating System</strong><small>Oct 2024</small></li>
+      </ul>
     </section>
 
     <section class="contact" id="contact">
