@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>George Albin Seda | Computer Engineering Student</title>
+<meta name="description" content="Portfolio of George Albin Seda, a computer engineering student building web apps, machine learning tools and accessible software.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF1F5; --surface:#FFFFFF; --ink:#14213D; --muted:#4A5671; --line:#D5DBE6;
+  --blue:#1F4FD8; --green:#159A4A; --orange:#F28C13; --red:#C8201F; --yellow:#F4D61A; --white:#F2F2F2;
+  --link:#1F4FD8;
+  --display:'Sora',system-ui,sans-serif; --body:'Figtree',system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0F1523;--surface:#172036;--ink:#EEF1F8;--muted:#A9B3CA;--line:#2A3552;--link:#7FA2FF;--white:#E8E8E8}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:17px;line-height:1.6;background:var(--bg);color:var(--ink)}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.nav .brand{font-family:var(--display);font-weight:800;text-decoration:none;color:var(--ink);font-size:1.05rem}
+.nav ul{display:flex;gap:22px;list-style:none;font-weight:500}
+.nav ul a{color:var(--muted);text-decoration:none}
+.nav ul a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;padding:56px 0 72px}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,6vw,4.1rem);line-height:1.05;letter-spacing:-.02em}
+.hero .role{margin-top:18px;font-size:1.2rem;color:var(--muted);max-width:34ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:600;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* cube face (the one memorable element) */
+.face{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px;background:#0b1020;border-radius:18px;max-width:300px;margin-left:auto;width:100%}
+.face span{aspect-ratio:1;border-radius:8px;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:clamp(1.4rem,4vw,2rem);color:#fff;opacity:0;animation:fill .35s forwards}
+.face .w{background:var(--white);color:#222}.face .y{background:var(--yellow);color:#222}
+.face .r{background:var(--red)}.face .o{background:var(--orange);color:#222}
+.face .b{background:var(--blue)}.face .g{background:var(--green)}
+.face span:nth-child(1){animation-delay:.1s}.face span:nth-child(2){animation-delay:.2s}.face span:nth-child(3){animation-delay:.3s}
+.face span:nth-child(4){animation-delay:.4s}.face span:nth-child(5){animation-delay:.5s}.face span:nth-child(6){animation-delay:.6s}
+.face span:nth-child(7){animation-delay:.7s}.face span:nth-child(8){animation-delay:.8s}.face span:nth-child(9){animation-delay:.9s}
+@keyframes fill{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+.caption{max-width:300px;margin:10px 0 0 auto;font-size:.85rem;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.face span{animation:none;opacity:1}html{scroll-behavior:auto}}
+
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--display);font-weight:700;font-size:1.7rem;letter-spacing:-.01em;margin-bottom:22px}
+.about p{max-width:64ch;color:var(--muted)}
+.about p+p{margin-top:14px}
+
+.projects{display:grid;gap:18px}
+.project{background:var(--surface);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:12px;padding:24px}
+.project h3{font-family:var(--display);font-size:1.2rem;margin-bottom:6px}
+.project .tag{font-size:.9rem;color:var(--muted);margin-bottom:10px}
+.project p{max-width:70ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;list-style:none}
+.chips li{font-size:.85rem;padding:3px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.links{display:flex;gap:18px;margin-top:16px;font-weight:600}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.skills h3{font-family:var(--display);font-size:1rem;margin-bottom:8px}
+.skills p{color:var(--muted)}
+
+.cert{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 24px;max-width:620px}
+.cert strong{font-family:var(--display)}
+.cert p{color:var(--muted);font-size:.95rem}
+
+.contact p{max-width:56ch;color:var(--muted);margin-bottom:18px}
+footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;gap:32px;padding-top:32px}
+  .face,.caption{margin-left:0}
+  .nav ul{gap:14px;font-size:.95rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="#top">George Seda</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>George Albin Seda</h1>
+        <p class="role">Computer engineering student building web apps, machine learning tools and accessible software.</p>
+        <div class="btns">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn" href="https://github.com/geoseda">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/george-albin-seda-2122ba3b7">LinkedIn</a>
+        </div>
+      </div>
+      <div aria-hidden="true">
+        <div class="face">
+          <span class="w">X</span><span class="y">*</span><span class="r">A</span>
+          <span class="o">+</span><span class="b">#</span><span class="g">O</span>
+          <span class="r">A</span><span class="g">O</span><span class="w">X</span>
+        </div>
+        <p class="caption">Every color gets a symbol, the idea behind CubeVision X.</p>
+      </div>
+    </div>
+
+    <section class="about" id="about">
+      <h2>About</h2>
+      <p>I’m a Computer Engineering student at the Technological Institute of the Philippines in Quezon City, interested in software development and web development.</p>
+      <p>I like building practical tools that solve real problems, from a sales management system for a local food business to an accessibility app for people with color vision deficiency.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <article class="project" style="--c:var(--green)">
+          <h3>Mad Potato Management System</h3>
+          <p class="tag">Web app for a real client · CPE 412 final project</p>
+          <p>I designed and developed a web app for the Mad Potato Teresa branch to replace paper logbooks. It records daily sales and inventory, backs up every entry to Google Sheets, forecasts sales with Meta Prophet, and includes MAPO, a chat assistant for stock and forecast questions.</p>
+          <ul class="chips"><li>Python</li><li>Flask</li><li>Prophet</li><li>scikit-learn</li><li>Google Apps Script</li></ul>
+          <div class="links">
+            <a href="https://madpotatosystem-2.onrender.com/">Live demo</a>
+            <a href="https://github.com/geoseda/MadPotatoSystem">Code</a>
+          </div>
+        </article>
+
+        <article class="project" style="--c:var(--blue)">
+          <h3>CubeVision X</h3>
+          <p class="tag">Accessible computer vision app · CPE 018 final project</p>
+          <p>A desktop app that scans a Rubik’s Cube with a webcam and labels each sticker with a symbol, pattern or color name, so people with color vision deficiency can tell colors apart. It validates the scan, then guides the user to the solution step by step, with optional voice assistance.</p>
+          <ul class="chips"><li>Python</li><li>OpenCV</li><li>PySide6</li><li>NumPy</li><li>pyttsx3</li></ul>
+          <div class="links">
+            <a href="https://github.com/geoseda/CubeVision_Project">Code</a>
+          </div>
+        </article>
+
+        <article class="project" style="--c:var(--orange)">
+          <h3>Weather Streaming Pipeline</h3>
+          <p class="tag">Group project · CPE 032 Big Data Engineering</p>
+          <p>A real-time data pipeline that pulls weather data from an API, streams it through Kafka, processes it with Spark, stores it in MongoDB and shows it on a Streamlit dashboard.</p>
+          <ul class="chips"><li>Kafka</li><li>Spark</li><li>MongoDB</li><li>Streamlit</li></ul>
+        </article>
+
+        <article class="project" style="--c:var(--red)">
+          <h3>Network Redundancy Lab</h3>
+          <p class="tag">Packet Tracer · Networking final skill exam</p>
+          <p>A network with two routers and two switches that stays up when a device fails. It uses EtherChannel, DHCP server and relay, and HSRP for gateway redundancy.</p>
+          <ul class="chips"><li>Cisco Packet Tracer</li><li>HSRP</li><li>EtherChannel</li><li>DHCP</li></ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div><h3>Languages</h3><p>Python, HTML, CSS, JavaScript</p></div>
+        <div><h3>Web</h3><p>Flask, REST APIs, Google Apps Script</p></div>
+        <div><h3>Data and AI</h3><p>pandas, scikit-learn, Prophet, OpenCV, Kafka, Spark, MongoDB</p></div>
+        <div><h3>Tools</h3><p>Git, GitHub, VS Code, Google Colab, Cisco Packet Tracer</p></div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2>Certificates</h2>
+      <div class="cert">
+        <strong>HTML Essentials</strong>
+        <p>Cisco Networking Academy, offered with JS Institute (OpenEDG)<br>Completed 7 November 2026</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <p>I’m open to internships and to connecting with people in tech. The quickest way to reach me is on LinkedIn.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://www.linkedin.com/in/george-albin-seda-2122ba3b7">Message me on LinkedIn</a>
+        <a class="btn" href="https://github.com/geoseda">See my code on GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 George Albin Seda · Technological Institute of the Philippines, Quezon City</footer>
+</div>
+</body>
+</html>
